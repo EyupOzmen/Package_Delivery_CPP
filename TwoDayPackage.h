@@ -11,6 +11,7 @@ public:
 	double getFlatFee()const;
 
 	double calculateCost()const;
+	string toString() const;
 
 private:
 	double flat_fee;

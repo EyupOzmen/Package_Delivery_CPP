@@ -25,5 +25,20 @@ double OvernightPackage::getAdditionalFee() const
 
 double OvernightPackage::calculateCost() const
 {
-	return getAdditionalFee()*getCostPerOunce() + Package::calculateCost();
+	return getAdditionalFee()*getWeight() + Package::calculateCost();
+}
+
+string OvernightPackage::toString() const
+{
+	ostringstream output;
+	output << fixed << setprecision(2);
+	output << "Sender Info:\n"
+		<< getSenderName() << ' ' << getSenderAdress() << ' '
+		<< getSenderCity() << ' ' << getSenderState() << ' '
+		<< getSenderZipCode() << "\nRecipient Info:\n"
+		<< getRecipientName() << ' ' << getRecipientAdress() << ' '
+		<< getRecipientCity() << ' ' << getRecipientState() << ' '
+		<< getRecipientZipCode() << "\nCost for shipment:\n"
+		<< calculateCost();
+	return output.str();
 }

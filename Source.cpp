@@ -14,10 +14,12 @@ int main() {
 	"Muhammed Bakirhan","Setbasi Disctrict","Bursa","Marmara",60100,16100,
 	100,1,10 };
 
-	package1.calculateCost();
-	package1.toString();
-
-
+	OvernightPackage package2{ "Eyup Ozmen","Sogukpinar Discrict","Tokat","Karadeniz",
+	"Muhammed Bakirhan","Setbasi Disctrict","Bursa","Marmara",60100,16100,
+	100,1,0.25 };
+	
+	cout << package1.toString() << "\n";
+	cout << package2.toString();
 
 
 	return 0;

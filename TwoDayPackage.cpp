@@ -28,4 +28,20 @@ double TwoDayPackage::calculateCost() const
 	return getFlatFee() + Package::calculateCost();
 }
 
+string TwoDayPackage::toString() const
+{
+	ostringstream output;
+	output << fixed << setprecision(2);
+	output << "Sender Info:\n"
+		<< getSenderName() << ' ' << getSenderAdress() << ' '
+		<< getSenderCity() << ' ' << getSenderState() << ' '
+		<< getSenderZipCode() << "\nRecipient Info:\n"
+		<< getRecipientName() << ' ' << getRecipientAdress() << ' '
+		<< getRecipientCity() << ' ' << getRecipientState() << ' '
+		<< getRecipientZipCode() << "\nCost for shipment:\n"
+		<< calculateCost();
+
+	return output.str();
+}
+
 

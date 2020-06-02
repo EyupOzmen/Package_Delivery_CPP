@@ -11,6 +11,7 @@ public:
 		double getAdditionalFee()const;
 
 		double calculateCost()const;
+		string toString()const;
 private:	
 
 	double additional_fee;
